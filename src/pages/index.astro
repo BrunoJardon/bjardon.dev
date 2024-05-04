@@ -1,0 +1,43 @@
+---
+import {
+  Contacts,
+  Education,
+  Experiences,
+  Header,
+  Projects,
+  Skills,
+  Navbar,
+} from "@/contents";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Jardón Bruno | Full stack">
+  <header class="w-screen flex flex-col items-center">
+    <Navbar client:only="react" />
+    <Header />
+  </header>
+  <main class="flex flex-col justify-center items-center w-screen">
+    <div class="w-9/12">
+      <section id="education">
+        <h2># Estudios</h2>
+        <Education />
+      </section>
+      <section id="skills">
+        <h2># Habilidades</h2>
+        <Skills />
+      </section>
+      <section id="projects">
+        <h2># Proyectos</h2>
+        <Projects />
+      </section>
+      <section id="experiences">
+        <h2># Experiencias</h2>
+        <Experiences />
+      </section>
+    </div>
+  </main>
+  <footer class="w-screen" id="contact">
+    <h2># Contacto</h2>
+    <Contacts />
+  </footer>
+</Layout>

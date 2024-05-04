@@ -1,0 +1,38 @@
+---
+import { SkillSection, Skill } from "@/components";
+---
+
+<div
+  class="transparencia p-3 my-4 w-full grid grid-cols-2 gap-3 rounded-md"
+>
+  <SkillSection title="Frontend">
+    <Skill imgSrc="/assets/imgs/Logos/html.svg" name="HTML" />
+    <Skill imgSrc="/assets/imgs/Logos/css.svg" name="CSS" />
+    <Skill imgSrc="/assets/imgs/Logos/js.svg" name="JavaScript" />
+    <Skill imgSrc="/assets/imgs/Logos/tailwind.svg" name="Tailwind" />
+    <Skill imgSrc="/assets/imgs/Logos/react.svg" name="React" />
+  </SkillSection>
+  <SkillSection title="Backend">
+    <Skill imgSrc="/assets/imgs/Logos/spring-boot.svg" name="SpringBoot" />
+    <Skill imgSrc="/assets/imgs/Logos/ts.svg" name="TypeScript" />
+    <Skill imgSrc="/assets/imgs/Logos/php.svg" name="PHP" />
+  </SkillSection>
+  <SkillSection title="Bases de datos">
+    <Skill imgSrc="/assets/imgs/Logos/mysql.svg" name="MySQL" />
+  </SkillSection>
+  <SkillSection title="Herramientas">
+    <Skill imgSrc="/assets/imgs/Logos/git.svg" name="Git" />
+    <Skill imgSrc="/assets/imgs/Logos/virtualbox.svg" name="VirtualBox" />
+    <Skill imgSrc="/assets/imgs/Logos/trello.svg" name="Trello" />
+    <Skill imgSrc="/assets/imgs/Logos/vscode.svg" name="VScode" />
+    <Skill imgSrc="/assets/imgs/Logos/bash.svg" name="Bash" />
+  </SkillSection>
+  <div class="opacidad text-center rounded-md col-span-2">
+    <h3>Sistemas Operativos</h3>
+    <div class="flex flex-row justify-around items-center p-3">
+      <Skill imgSrc="/assets/imgs/Logos/windows.svg" name="Windows" />
+      <Skill imgSrc="/assets/imgs/Logos/debian.svg" name="Debian" />
+      <Skill imgSrc="/assets/imgs/Logos/ubuntu.svg" name="Ubuntu" />
+    </div>
+  </div>
+</div>

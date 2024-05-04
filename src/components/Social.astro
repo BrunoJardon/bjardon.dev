@@ -1,0 +1,17 @@
+---
+interface Props {
+  imgSrc: string;
+  social: string;
+  link: string;
+}
+
+const { imgSrc, social, link } = Astro.props;
+---
+
+<a
+  class="rounded-full transition-transform duration-300 hover:scale-110 active:scale-95"
+  href={link}
+  target="_blank"
+>
+  <img class="w-12" src={imgSrc} alt={social} />
+</a>

@@ -1,0 +1,143 @@
+---
+const { title } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic explicabo labore voluptatem sunt facilis id nam nulla quos, laboriosam, modi odit pariatur possimus assumenda optio nostrum nobis vero perspiciatis inventore!"
+    />
+    <title>{title}</title>
+  </head>
+  <body
+    id="start"
+    class="min-h-screen bg-gradient-to-b from-[--fondo] to-[--fondob]"
+  >
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  /* Fonts */
+  @font-face {
+    font-family: "Geologica";
+    src: url("/assets/fonts/Geologica-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GeologicaI";
+    src: url("/assets/fonts/Geologica-MediumItalic.ttf");
+    font-weight: 750;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "GeologicaM";
+    src: url("/assets/fonts/Geologica-Medium.ttf");
+    font-weight: 750;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GeologicaL";
+    src: url("/assets/fonts/Geologica-Light.ttf");
+    font-weight: lighter;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GeologicaEL";
+    src: url("/assets/fonts/Geologica-ExtraLight.ttf");
+    font-weight: 150;
+    font-style: normal;
+  }
+
+  /* Color scheme */
+  :root {
+    color-scheme: light dark;
+  }
+
+  ::selection {
+    color: #ededed;
+    background-color: #112533;
+  }
+
+  /* CSS vars */
+  * {
+    /* Color palette */
+    --fondo: #7a7a7f;
+    --fondob: #0e2b3d;
+    --transparencia: rgba(196, 196, 206, 0.57);
+    --opacidad: #112533;
+    --tipografia: #ededed;
+    --tipografiab: #1e1e1e;
+  }
+
+  /* Global styles */
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: Geologica, sans-serif;
+    user-select: text;
+    color: var(--tipografia);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+  }
+
+  h2 {
+    font-family: GeologicaI, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: center;
+  }
+
+  img {
+    user-select: none;
+  }
+
+  /* Generic classes */
+  .transparencia {
+    background-color: rgba(196, 196, 206, 0.57);
+  }
+
+  .opacidad {
+    background-color: rgba(17, 37, 51, 0.57);
+    backdrop-filter: blur(5px);
+  }
+
+  @media (min-width: 640px) {
+    .sm\:transparencia {
+      background-color: rgba(196, 196, 206, 0.57);
+    }
+    
+    .sm\:opacidad {
+      background-color: rgba(17, 37, 51, 0.57);
+      backdrop-filter: blur(5px);
+    }
+    
+    .sm\:bg-\[\#00000000\] {
+        background-color: #00000000;
+    }
+  }
+</style>
