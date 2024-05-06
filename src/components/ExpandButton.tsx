@@ -6,7 +6,7 @@ interface Props{
 export default function ExpandButton({isOpen, setIsOpen}:Props) {
   
   const genericStyles =
-    "block bg-[--tipografia] transition-all duration-300 ease-out h-1 w-6 rounded-sm absolute";
+    "block bg-[--fonta] transition-all duration-300 ease-out h-1 w-6 rounded-sm absolute";
   return (
       <button
         onClick={() => {

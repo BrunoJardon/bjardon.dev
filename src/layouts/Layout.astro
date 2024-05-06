@@ -6,7 +6,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
@@ -16,7 +16,7 @@ const { title } = Astro.props;
   </head>
   <body
     id="start"
-    class="min-h-screen bg-gradient-to-b from-[--fondo] to-[--fondob]"
+    class="min-h-screen bg-gradient-to-b from-[#7a7a7f] to-[#0e2b3d]"
   >
     <slot />
   </body>
@@ -64,20 +64,22 @@ const { title } = Astro.props;
     color-scheme: light dark;
   }
 
-  ::selection {
-    color: #ededed;
-    background-color: #112533;
-  }
-
   /* CSS vars */
   * {
     /* Color palette */
-    --fondo: #7a7a7f;
+    --negro: #2b2a29;
+    --negro90: #3a3a39;
+    --gris: #878786;
+    --blanco: #fefefe;
+
+    --fondoa: #7a7a7f;
     --fondob: #0e2b3d;
-    --transparencia: rgba(196, 196, 206, 0.57);
-    --opacidad: #112533;
-    --tipografia: #ededed;
-    --tipografiab: #1e1e1e;
+
+    --fonta: #080808; /* Foreground */
+    --bga: rgba(196, 196, 206, 0.57); /* Background */
+
+    --fontb: #f0f0f0; /* Foreground */
+    --bgb: rgba(17, 37, 51, 0.57); /* Background */
   }
 
   /* Global styles */
@@ -90,7 +92,7 @@ const { title } = Astro.props;
   body {
     font-family: Geologica, sans-serif;
     user-select: text;
-    color: var(--tipografia);
+    color: var(--fontb);
   }
 
   ul {
@@ -116,28 +118,32 @@ const { title } = Astro.props;
     user-select: none;
   }
 
-  /* Generic classes */
-  .transparencia {
-    background-color: rgba(196, 196, 206, 0.57);
+  p {
+    margin-bottom: 1rem;
   }
 
-  .opacidad {
-    background-color: rgba(17, 37, 51, 0.57);
+  /* Generic classes */
+  .bga {
+    background-color: var(--bga);
+  }
+
+  .bgb {
+    background-color: var(--bgb);
     backdrop-filter: blur(5px);
   }
 
   @media (min-width: 640px) {
-    .sm\:transparencia {
-      background-color: rgba(196, 196, 206, 0.57);
+    .sm\:bga {
+      background-color: var(--bga);
     }
-    
-    .sm\:opacidad {
-      background-color: rgba(17, 37, 51, 0.57);
+
+    .sm\:bgb {
+      background-color: var(--bgb);
       backdrop-filter: blur(5px);
     }
-    
+
     .sm\:bg-\[\#00000000\] {
-        background-color: #00000000;
+      background-color: #00000000;
     }
   }
 </style>

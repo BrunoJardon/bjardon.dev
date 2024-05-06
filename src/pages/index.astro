@@ -7,6 +7,7 @@ import {
   Projects,
   Skills,
   Navbar,
+  About,
 } from "@/contents";
 import Layout from "@/layouts/Layout.astro";
 ---
@@ -18,6 +19,14 @@ import Layout from "@/layouts/Layout.astro";
   </header>
   <main class="flex flex-col justify-center items-center w-screen">
     <div class="w-9/12">
+      <section id="projects">
+        <h2># Proyectos</h2>
+        <Projects />
+      </section>
+      <section id="experiences">
+        <h2># Experiencias</h2>
+        <Experiences />
+      </section>
       <section id="education">
         <h2># Estudios</h2>
         <Education />
@@ -26,13 +35,9 @@ import Layout from "@/layouts/Layout.astro";
         <h2># Habilidades</h2>
         <Skills />
       </section>
-      <section id="projects">
-        <h2># Proyectos</h2>
-        <Projects />
-      </section>
-      <section id="experiences">
-        <h2># Experiencias</h2>
-        <Experiences />
+      <section id="about">
+        <h2># Sobre mi</h2>
+        <About />
       </section>
     </div>
   </main>
