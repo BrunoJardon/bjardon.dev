@@ -1,5 +1,11 @@
 ---
-const { title } = Astro.props;
+interface Props{
+  title: string;
+  description: string;
+  img: string;
+}
+
+const { title, description, img } = Astro.props;
 ---
 
 <html lang="es">
@@ -8,10 +14,10 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic explicabo labore voluptatem sunt facilis id nam nulla quos, laboriosam, modi odit pariatur possimus assumenda optio nostrum nobis vero perspiciatis inventore!"
-    />
+    <meta name="title" content={title} />
+    <meta name="description" content={description}/>
+    <meta name="image" content={img} />
+    <!-- <meta name="twitter:card" content="summary_large_image" /> -->
     <title>{title}</title>
   </head>
   <body
