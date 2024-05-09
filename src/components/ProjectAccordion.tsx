@@ -42,7 +42,7 @@ const ProjectAccordion: React.FC<Props> = ({
           href={repo}
           target="_blank"
         >
-          Codigo
+          Código
           <img
             className="w-6 ml-2"
             src="/assets/imgs/Logos/github.svg"
