@@ -1,12 +1,14 @@
+import { useWindowDimensions } from "@/hooks";
 import { useEffect, useState } from "react";
 import { MenuButton } from "@/components";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { height } = useWindowDimensions();
   const [scrollPosition, setScrollPosition] = useState(0);
   const linkStyles =
     "transition-colors duration-300 " +
-    `${scrollPosition >= 500 ? "hover:text-[--fontb]" : "hover:text-[--fonta]"}`;
+    `${scrollPosition >= height*0.93 ? "hover:text-[--fontb]" : "hover:text-[--fonta]"}`;
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -25,7 +27,7 @@ export default function Navbar() {
     <header
       className={
         "w-screen p-2 transition-colors duration-500 fixed z-50 " +
-        `${scrollPosition >= 500 ? "bga text-[--fonta] backdrop-blur-sm" : "bgb text-[--fontb]"}`
+        `${scrollPosition >= height*0.93 ? "bga text-[--fonta] backdrop-blur-sm" : "bgb text-[--fontb]"}`
       }
     >
       <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />

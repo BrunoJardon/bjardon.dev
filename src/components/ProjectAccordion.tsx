@@ -45,7 +45,7 @@ const ProjectAccordion: React.FC<Props> = ({
           Código
           <img
             className="w-6 ml-2"
-            src="/assets/imgs/Logos/github.svg"
+            src="/assets/imgs/socials/github.svg"
             alt="GitHub"
           />
         </a>
