@@ -1,11 +1,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg xmlns="http://www.w3.org/2000/svg" aria-label="Trello" role="img" viewBox="0 0 512 512" fill="#ededed" width="128px" height="128px" style="--darkreader-inline-fill: #222526; --darkreader-inline-stroke: #dddad5;" stroke="#ededed" data-darkreader-inline-fill="" data-darkreader-inline-stroke="">
+<svg width="128px" height="128px" viewBox="-15.36 -15.36 286.72 286.72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#080808" stroke="#080808">
 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier">
-<rect width="512" height="512" rx="15%" fill="#0079bf" data-darkreader-inline-fill="" style="--darkreader-inline-fill: #006199;"/>
-<rect height="188" rx="23" width="132" x="284" y="95"/>
-<rect height="296" rx="23" width="132" x="97" y="95"/>
-</g>
+<g id="SVGRepo_iconCarrier"> <defs> <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1"> <stop stop-color="#0091E6" offset="0%"> </stop> <stop stop-color="#0079BF" offset="100%"> </stop> </linearGradient> </defs> <g> <g> <rect fill="url(#linearGradient-1)" x="0" y="0" width="256" height="256" rx="25"> </rect> <rect fill="#f0f0f0" x="144.64" y="33.28" width="78.08" height="112" rx="12"> </rect> <rect fill="#f0f0f0" x="33.28" y="33.28" width="78.08" height="176" rx="12"> </rect> </g> </g> </g>
 </svg>

@@ -22,12 +22,12 @@ const Experience: React.FC<Props> = ({ title, position, imgSrc, children }) => {
       <h3 className="font-[GeologicaL] sm:hidden">{position}</h3>
       <div
         className={
-          "w-full flex flex-col justify-center transition-all duration-[400ms] items-center rounded-lg p-2 sm:w-9/12 sm:bga sm:pt-12 " +
+          "w-full flex flex-col justify-center transition-all duration-[400ms] items-center rounded-lg p-2 sm:w-full sm:bga sm:pt-12 sm:shadow " +
           `${!isOpen ? "bg-[#00000000]" : "bga"}`
         }
       >
-        <h3 className="hidden sm:text-xl sm:block sm:text-[--fonta]">{title}</h3>
-        <h3 className="hidden sm:block sm:text-[--fonta] sm:font-[GeologicaL]">{position}</h3>
+        <h3 className="hidden sm:text-xl sm:block sm:text-[--fonta] sm:text-center">{title}</h3>
+        <h3 className="hidden sm:block sm:text-[--fonta] sm:font-[GeologicaL] sm:text-center">{position}</h3>
         
         <span
           className={

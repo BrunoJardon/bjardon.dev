@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <header
       className={
-        "w-screen p-2 transition-colors duration-500 fixed z-50 " +
+        "w-screen p-2 transition-colors duration-500 fixed z-50 shadow " +
         `${scrollPosition >= height*0.93 ? "bga text-[--fonta] backdrop-blur-sm" : "bgb text-[--fontb]"}`
       }
     >
