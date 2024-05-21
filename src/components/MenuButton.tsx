@@ -9,7 +9,7 @@ const MenuButton: React.FC<Props> = ({ isOpen, setIsOpen }) => {
   return (
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="sm:hidden flex flex-col justify-center items-center p-2 bg-[--bga] rounded-md transition-transform duration-300 hover:scale-110"
+        className="md:hidden flex flex-col justify-center items-center p-2 bg-[--bga] rounded-md transition-transform duration-300 hover:scale-110"
       >
         <span className={genericStyles + `${isOpen && "rotate-45 translate-y-2"}`}></span>
         <span className={genericStyles + "my-1.5 " + `${isOpen && "opacity-0"}`}></span>

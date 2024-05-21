@@ -33,11 +33,11 @@ export default function Navbar() {
       <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
       <nav
         className={
-          "transition-all duration-300 overflow-hidden sm:max-h-fit sm:w-full sm:overflow-visible " +
+          "transition-all duration-300 overflow-hidden md:max-h-fit md:w-full md:overflow-visible " +
           `${isOpen ? "max-h-[128rem]" : "max-h-0"}`
         }
       >
-        <ul className="p-3 static sm:flex sm:flex-row sm:justify-around sm:items-center">
+        <ul className="p-3 static md:flex md:flex-row md:justify-around md:items-center lg:justify-evenly">
           <li>
             <a className={linkStyles} href="#start">
               # Inicio
