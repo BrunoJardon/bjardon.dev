@@ -19,9 +19,10 @@ const ProjectAccordion: React.FC<Props> = ({
   return (
     <div className="bga rounded-lg flex flex-col justify-around items-center pb-2 my-4 w-full sm:w-[45%] sm:m-0 sm:p-0 shadow">
       <img
-        className="rounded-t-md w-full"
+        className="rounded-t-md"
         src={preview}
         alt={title + " preview"}
+        width="100%"
       />
       <h3 className="group transition-all text-[--fonta] duration-500 text-xl my-4">
         {title}
