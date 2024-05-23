@@ -1,0 +1,160 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  img: string;
+}
+
+const { title, description, img } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jardón Bruno Noel">
+    <meta name="card" content={img} />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="image" content={img} />
+    <meta name="robots" content="noindex" />
+    <meta name="title" content={title} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body id="start" class="bg-gradient-to-b from-[#7a7a7f] to-[#0e2b3d]">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  /* Fonts */
+  @font-face {
+    font-family: "Geologica";
+    src: url("/assets/fonts/Geologica-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "GeologicaI";
+    src: url("/assets/fonts/Geologica-MediumItalic.ttf");
+    font-weight: 750;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "GeologicaM";
+    src: url("/assets/fonts/Geologica-Medium.ttf");
+    font-weight: 750;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "GeologicaL";
+    src: url("/assets/fonts/Geologica-Light.ttf");
+    font-weight: lighter;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "GeologicaEL";
+    src: url("/assets/fonts/Geologica-ExtraLight.ttf");
+    font-weight: 150;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* Color scheme */
+  :root {
+    color-scheme: light dark;
+  }
+
+  /* CSS vars */
+  * {
+    /* Color palette */
+    --fondoa: #7a7a7f;
+    --fondob: #0e2b3d;
+
+    --fonta: #080808; /* Foreground */
+    --bga: rgba(196, 196, 206, 0.57); /* Background */
+
+    --fontb: #f0f0f0; /* Foreground */
+    --bgb: rgba(17, 37, 51, 0.57); /* Background */
+  }
+
+  /* Global styles */
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: Geologica, sans-serif;
+    user-select: text;
+    color: var(--fontb);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+  }
+
+  h2 {
+    font-family: GeologicaI, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: center;
+    padding-top: 3.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  img {
+    user-select: none;
+  }
+
+  p {
+    font-family: Geologica;
+    text-indent: 0.75rem;
+    margin-bottom: 0.5rem;
+    text-wrap: pretty;
+  }
+
+  /* Generic classes */
+  .bga {
+    background-color: var(--bga);
+  }
+
+  .bgb {
+    background-color: var(--bgb);
+    backdrop-filter: blur(5px);
+  }
+
+  @media (min-width: 640px) {
+    .sm\:bga {
+      background-color: var(--bga);
+    }
+
+    .sm\:bgb {
+      background-color: var(--bgb);
+      backdrop-filter: blur(5px);
+    }
+
+    .sm\:bg-\[\#00000000\] {
+      background-color: #00000000;
+    }
+  }
+</style>

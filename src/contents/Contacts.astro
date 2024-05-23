@@ -1,0 +1,60 @@
+---
+import { Social } from "@/components";
+---
+
+<div class="flex justify-center items-center">
+  <div class="w-fit mb-4 flex flex-col justify-center items-center relative">
+    <div class="flex flex-row justify-around items-center w-full mb-4">
+      <Social
+        imgSrc="/assets/imgs/socials/github.svg"
+        social="GitHub"
+        link="https://github.com/brunojardon"
+      />
+      <Social
+        imgSrc="/assets/imgs/socials/linkedin.svg"
+        social="LinkedIn"
+        link="https://www.linkedin.com/in/bruno-jardon"
+      />
+    </div>
+    <div class="flex flex-row justify-center items-center">
+      <div
+        class="flex flex-row items-center border-2 border-[--fontb] px-2 py-1 rounded-md relative"
+      >
+        <img
+          class="w-8 mr-1.5"
+          src="/assets/imgs/socials/email.svg"
+          alt="Correo"
+        />
+        <a
+          class="group transition-all duration-500"
+          href="mailto:brunojardon3@gmail.com"
+        >
+          brunojardon3@gmail.com
+          <span
+            class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[--fontb]"
+          ></span>
+        </a>
+      </div>
+      <button
+        id="copyEmail"
+        class="border-2 border-[--fontb] bga rounded-md p-1 transition-transform duration-300 hover:scale-110 active:scale-95 absolute text-[--fonta] -right-[4.5rem] select-none"
+      >
+        Copiar
+      </button>
+    </div>
+  </div>
+</div>
+<script is:inline>
+  const copyEmail = document.getElementById("copyEmail");
+  copyEmail.addEventListener("click", async () => {
+    navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
+      if (result.state === "granted" || result.state === "prompt") {
+        try {
+          navigator.clipboard.writeText("brunojardon3@gmail.com");
+        } catch {
+          alert("Error al copiar al porta papeles");
+        }
+      }
+    });
+  });
+</script>

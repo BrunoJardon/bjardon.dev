@@ -1,0 +1,22 @@
+---
+import { ProjectAccordion } from "@/components";
+---
+
+<div
+  class="flex flex-col justify-center w-full items-center sm:flex-wrap sm:flex-row sm:gap-4 sm:items-start"
+>
+  <ProjectAccordion
+    preview="https://raw.githubusercontent.com/brunojardon/DebianUpgrader/main/preview.webp"
+    title="Debian Upgrader"
+    repo="https://github.com/brunojardon/DebianUpgrader"
+    client:only="react"
+  >
+    <p>
+      He realizado un script que automatiza el proceso de actualización de un
+      sistema basado en Debian, incluida la actualización de repositorios,
+      instalación de actualizaciones de paquetes, resolución de dependencias y
+      limpieza de archivos temporales. También proporciona la opción de
+      reiniciar el sistema si es necesario después de la actualización.
+    </p>
+  </ProjectAccordion>
+</div>
