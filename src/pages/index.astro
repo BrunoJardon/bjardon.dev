@@ -7,12 +7,14 @@ import {
   Projects,
   Skills,
   Navbar,
+  Loading,
   About,
 } from "@/contents";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="Jardón Bruno | Full stack" description="Más de un año de experiencia en el desarrollo de software. Técnico en Informática." img="/favicon.svg">
+  <Loading>
   <header class="w-screen flex flex-col items-center">
     <Navbar client:only="react" />
     <Header />
@@ -45,4 +47,5 @@ import Layout from "@/layouts/Layout.astro";
     <h2># Contacto</h2>
     <Contacts />
   </footer>
+</Loading>
 </Layout>
