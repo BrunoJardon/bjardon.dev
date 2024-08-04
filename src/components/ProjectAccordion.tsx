@@ -17,7 +17,7 @@ const ProjectAccordion: React.FC<Props> = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bga rounded-lg flex flex-col justify-around items-center pb-2 my-4 w-full sm:w-[45%] sm:m-0 sm:p-0 shadow">
+    <div className="bga rounded-lg flex flex-col justify-around items-center my-4 w-full sm:w-[45%] sm:m-0 sm:p-0 shadow">
       <img
         className="rounded-t-md"
         src={preview}

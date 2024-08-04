@@ -22,7 +22,7 @@ const Experience: React.FC<Props> = ({ title, position, imgSrc, children }) => {
       <h3 className="font-[GeologicaL] sm:hidden">{position}</h3>
       <div
         className={
-          "w-full flex flex-col justify-center transition-all duration-[400ms] items-center rounded-lg p-2 sm:w-full sm:bga sm:pt-12 sm:shadow " +
+          "w-full flex flex-col justify-center transition-all duration-[400ms] items-center rounded-lg sm:w-full sm:bga sm:pt-12 sm:shadow " +
           `${!isOpen ? "bg-[#00000000]" : "bga"}`
         }
       >
