@@ -1,6 +1,17 @@
 ---
 import { Image } from "astro:assets";
 
+import {
+  AboutMe,
+  Experiences,
+  Footer,
+  Hero,
+  Projects,
+  Skills,
+  Studies,
+} from "@/sections/index.js";
+import "@/styles.css";
+
 const name = "Jardón Bruno";
 const title = "Desarrollador Web Full Stack";
 const prevImg = "/src/assets/imgs/perfil.webp";
@@ -31,7 +42,7 @@ const description =
 
     <title>{name} | {title}</title>
   </head>
-  <body>
+  <body id="start">
     <header>
       <nav>
         <ul>
@@ -46,8 +57,8 @@ const description =
       </nav>
     </header>
 
-    <main id="start">
-      <section class="hero">
+    <main>
+      <section id="hero">
         <Image
           src="/src/assets/imgs/perfil.webp"
           alt="Foto de perfil de Jardón Bruno"
