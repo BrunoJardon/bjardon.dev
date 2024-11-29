@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section id="studies">
+  <h2>Estudios</h2>
+  <ul class="education-list">
+    <li>
+      <article class="education-card">
+        <Image
+          src="/src/assets/imgs/logos/JoseHernandez.webp"
+          alt="Logo de José Hernández"
+          width={100}
+          height={100}
+        />
+        <h3>José Hernández</h3>
+        <p class="degree">Técnico en Informática</p>
+        <p class="education-duration">Marzo 2016 - Diciembre 2023</p>
+      </article>
+    </li>
+    <li>
+      <article class="education-card">
+        <h3>English</h3>
+        <p class="degree">Inglés Técnico</p>
+        <p class="education-duration">Marzo 2024 - Actualidad</p>
+      </article>
+    </li>
+    <li>
+      <article class="education-card">
+        <Image
+          src="/src/assets/imgs/logos/UNLP.webp"
+          alt="Logo de UTN"
+          width={100}
+          height={100}
+        />
+        <h3>UNLP</h3>
+        <p class="degree">Ingeniería en Computación</p>
+        <p class="education-duration">Enero 2025 - Actualidad</p>
+      </article>
+    </li>
+  </ul>
+</section>

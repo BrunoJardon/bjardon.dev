@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section id="projects">
+  <h2>Proyectos</h2>
+  <ul class="project-list">
+    <li>
+      <article class="project-card">
+        <h3>SysUp</h3>
+        <Image
+          src="https://raw.githubusercontent.com/brunojardon/SysUp/main/preview.webp"
+          alt="Vista previa de SysUp"
+          width={300}
+          height={200}
+          loading="eager"
+        />
+        <p>
+          Script que automatiza el proceso de actualización de sistemas basados
+          en Debian, incluyendo actualización de repositorios, instalación de
+          paquetes, resolución de dependencias y limpieza.
+        </p>
+        <p>
+          Ofrece la opción de reiniciar el sistema si es necesario después de la
+          actualización.
+        </p>
+        <a href="https://github.com/JardonBruno/SysUp" class="project-link">
+          Código
+          <Image
+            src="/src/assets/imgs/socials/github.svg"
+            alt="Logo de Github"
+            width={20}
+            height={20}
+            loading="eager"
+          />
+        </a>
+      </article>
+    </li>
+  </ul>
+</section>

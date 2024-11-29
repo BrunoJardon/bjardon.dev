@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+---
+
+<footer id="contacts">
+  <h2>Contacto</h2>
+  <ul class="social-links">
+    <li>
+      <a
+        href="https://github.com/BrunoJardon"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src="/src/assets/imgs/socials/github.svg"
+          alt="Github"
+          title="Github"
+          loading="lazy"
+          width={30}
+          height={30}
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.linkedin.com/in/brunojardon/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src="/src/assets/imgs/socials/linkedin.svg"
+          alt="LinkedIn"
+          title="LinkedIn"
+          loading="lazy"
+          width={30}
+          height={30}
+        />
+      </a>
+    </li>
+  </ul>
+  <p>
+    <span id="email">brunojardon3@gmail.com</span>
+    <button onclick="copyToClipboard()" aria-label="Copiar correo electrónico"
+      >Copiar</button
+    >
+  </p>
+</footer>
