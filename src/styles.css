@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Color scheme */
+:root {
+  color-scheme: light dark;
+
+  /* Color palette */
+  --gradient-color-a: #7a7a7f;
+  --gradient-color-b: #0e2b3d;
+
+  --font-color-a: #080808;
+  --bg-color-a: rgb(196 196 206 / 0.57);
+
+  --font-color-b: #f0f0f0;
+  --bg-color-b: rgb(17 37 51 / 0.57);
+}
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  overflow-x: hidden;
+}
+
+body,
+button {
+  font-family: "Geologica Variable", sans-serif;
+  color: var(--font-color-b);
+}
+
+button {
+  user-select: none;
+}
+
+h2 {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: center;
+  padding-top: 3.75rem;
+  margin-bottom: 1.5rem;
+}
+
+img {
+  user-select: none;
+}
+
+p {
+  text-indent: 0.75rem;
+  margin-bottom: 0.5rem;
+  text-wrap: pretty;
+}
