@@ -53,3 +53,25 @@ p {
   margin-bottom: 0.5rem;
   text-wrap: pretty;
 }
+
+@media (prefers-color-scheme: light) {
+  body,
+  button {
+    color: var(--font-color-a);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  button {
+    color: var(--font-color-b);
+  }
+}
+
+/* Tailwind CSS repetitive styles */
+@layer components {
+  .btn,
+  button {
+    @apply cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95;
+  }
+}
