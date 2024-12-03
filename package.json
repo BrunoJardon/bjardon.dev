@@ -14,5 +14,9 @@
     "@fontsource-variable/geologica": "5.1.0",
     "astro": "4.16.16",
     "tailwindcss": "3.4.15"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.1",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
