@@ -49,7 +49,6 @@ img {
 }
 
 p {
-  text-indent: 0.75rem;
   margin-bottom: 0.5rem;
   text-wrap: pretty;
 }
@@ -73,5 +72,25 @@ p {
   .btn,
   button {
     @apply cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95;
+  }
+
+  .skill-card {
+    @apply bg-background-b text-center rounded-md;
+  }
+
+  .skill-list {
+    @apply p-2 flex flex-wrap justify-center gap-2 sm:gap-0;
+  }
+
+  .skill-item {
+    @apply flex flex-col justify-center items-center w-fit h-fit sm:mx-1;
+  }
+
+  .skill-icon {
+    @apply w-[2.5rem] hover:scale-125 transition-transform duration-300;
+  }
+
+  .skill-name {
+    @apply hidden sm:inline sm:mt-1 sm:text-sm sm:font-light;
   }
 }
