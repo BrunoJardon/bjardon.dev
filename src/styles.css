@@ -74,6 +74,10 @@ p {
     @apply cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95;
   }
 
+  .education-card {
+    @apply bg-background-a flex flex-row justify-between h-24 items-center p-2 my-3 text-center rounded-full text-font-a sm:h-auto sm:flex sm:flex-col sm:relative sm:rounded-md mt-10;
+  }
+
   .skill-card {
     @apply bg-background-b text-center rounded-md;
   }
