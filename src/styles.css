@@ -75,7 +75,7 @@ p {
   }
 
   .education-card {
-    @apply bg-background-a flex flex-row justify-between h-24 items-center p-2 my-3 text-center rounded-full text-font-a sm:h-auto sm:flex sm:flex-col sm:relative sm:rounded-md mt-10;
+    @apply bg-background-a flex flex-row justify-between h-24 items-center p-2 my-3 text-center rounded-full text-font-a sm:mx-2 sm:h-auto sm:flex sm:flex-col sm:relative sm:rounded-md mt-10;
   }
 
   .skill-card {
