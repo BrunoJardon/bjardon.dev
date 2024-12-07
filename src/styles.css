@@ -53,6 +53,27 @@ p {
   text-wrap: pretty;
 }
 
+/* Underscore style */
+.underscore {
+  position: relative;
+  overflow: hidden;
+}
+
+.underscore::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 0.15em;
+  background-color: #f0f0f0;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+
+.underscore:hover::after {
+  transform: translateX(0);
+}
+
+/* Theme styles */
 @media (prefers-color-scheme: light) {
   body,
   button {

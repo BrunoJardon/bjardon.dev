@@ -1,47 +1,80 @@
 ---
 import { Image } from "astro:assets";
+
+const socials = [
+  {
+    name: "Github",
+    link: "https://github.com/BrunoJardon",
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/bruno-jardon/",
+  },
+];
 ---
 
-<footer id="contacts">
+<footer class="pb-7" id="contacts">
   <h2>Contacto</h2>
-  <ul class="social-links">
-    <li>
-      <a
-        href="https://github.com/BrunoJardon"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          src="/src/assets/imgs/socials/github.svg"
-          alt="Github"
-          title="Github"
-          loading="lazy"
-          width={30}
-          height={30}
-        />
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://www.linkedin.com/in/brunojardon/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Image
-          src="/src/assets/imgs/socials/linkedin.svg"
-          alt="LinkedIn"
-          title="LinkedIn"
-          loading="lazy"
-          width={30}
-          height={30}
-        />
-      </a>
-    </li>
-  </ul>
-  <p>
-    <span id="email">brunojardon3@gmail.com</span>
-    <button onclick="copyToClipboard()" aria-label="Copiar correo electrónico"
-      >Copiar</button
+  <div class="flex flex-col items-center justify-center">
+    <ul class="flex flex-row w-3/4 justify-evenly mb-3">
+      {
+        socials.map((social) => (
+          <li>
+            <a
+              class="btn inline-block rounded-full"
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={`/src/assets/imgs/socials/${social.name.toLowerCase()}.svg`}
+                alt={social.name}
+                title={social.name}
+                loading="lazy"
+                width={36}
+                height={36}
+              />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div
+      class="flex flex-row items-center border-2 border-font-b px-2 py-1 rounded-md relative w-fit gap-x-1"
     >
-  </p>
+      <Image
+        src="/src/assets/imgs/socials/email.svg"
+        width={32}
+        height={32}
+        alt="Email"
+      />
+      <a id="email" class="underscore" href="mailto:brunojardon3@gmail.com"
+        >brunojardon3@gmail.com</a
+      >
+      <button
+        class="btn border-2 border-font-b bg-background-a rounded-md px-2 py-1 text-font-a absolute -right-20"
+        id="copy-email"
+        aria-label="Copiar correo electrónico"
+      >
+        Copiar
+      </button>
+    </div>
+  </div>
 </footer>
+
+<script>
+  const copyEmail = document.getElementById("copy-email");
+  copyEmail.addEventListener("click", () => {
+    navigator.permissions
+      .query({ name: "clipboard-write" as PermissionName })
+      .then((result) => {
+        if (result.state === "granted" || result.state === "prompt") {
+          try {
+            navigator.clipboard.writeText("brunojardon3@gmail.com");
+          } catch {
+            alert("Error al copiar al porta papeles");
+          }
+        }
+      });
+  });
+</script>
