@@ -92,7 +92,19 @@ p {
 @layer components {
   .btn,
   button {
-    @apply cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95;
+    @apply cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95 ease-in;
+  }
+
+  .project-link-btn {
+    @apply inline-block bg-background-b rounded-md px-2 py-1 text-font-b text-sm mt-2 sm:mt-0;
+  }
+
+  .expand-btn {
+    @apply flex justify-center items-center mx-auto my-6 w-6 h-6 animate-pulse rounded-full [&>*:last-child]:absolute;
+  }
+
+  .expand-btn-line {
+    @apply bg-font-a transition-all duration-500 h-1 w-6 rounded-sm;
   }
 
   .education-card {
