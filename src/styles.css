@@ -49,7 +49,6 @@ img {
 }
 
 p {
-  margin-bottom: 0.5rem;
   text-wrap: pretty;
 }
 
@@ -90,6 +89,10 @@ p {
 
 /* Tailwind CSS repetitive styles */
 @layer components {
+  .paragraph {
+    @apply indent-2 mb-2 text-pretty;
+  }
+
   .btn,
   button {
     @apply cursor-pointer transition-transform duration-300 hover:scale-110 active:scale-95 ease-in;
@@ -100,7 +103,7 @@ p {
   }
 
   .expand-btn {
-    @apply flex justify-center items-center mx-auto my-6 w-6 h-6 animate-pulse rounded-full [&>*:last-child]:absolute;
+    @apply flex justify-center items-center mx-auto w-6 h-6 animate-pulse rounded-full [&>*:last-child]:absolute;
   }
 
   .expand-btn-line {

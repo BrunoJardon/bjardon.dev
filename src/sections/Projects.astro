@@ -6,16 +6,10 @@ import { ExpandBtn } from "@/components/ExpandBtn";
 const projects = [
   {
     name: "SysUp",
-    description: `Script que automatiza el proceso de actualización de sistemas basados en Debian, incluyendo actualización de repositorios, instalación de paquetes, resolución de dependencias y limpieza.`,
+    description: [
+      "Script que automatiza el proceso de actualización de sistemas basados en Debian, incluyendo actualización de repositorios, instalación de paquetes, resolución de dependencias y limpieza.",
+    ],
     skills: ["bash"],
-    image:
-      "https://raw.githubusercontent.com/brunojardon/SysUp/main/preview.webp",
-    link: "https://github.com/JardonBruno/SysUp",
-  },
-  {
-    name: "Lorem Ipsum",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.`,
-    skills: ["bash", "html", "css", "js"],
     image:
       "https://raw.githubusercontent.com/brunojardon/SysUp/main/preview.webp",
     link: "https://github.com/JardonBruno/SysUp",
@@ -55,8 +49,10 @@ const projects = [
                 </li>
               ))}
             </ul>
-            <ExpandBtn client:load>
-              <p class="indent-2">{project.description}</p>
+            <ExpandBtn styles="mx-6 sm:mx-10" margin="my-4" client:load>
+              {project.description.map((description) => (
+                <p class="paragraph">{description}</p>
+              ))}
               <a
                 class="project-link-btn"
                 href={project.link}
