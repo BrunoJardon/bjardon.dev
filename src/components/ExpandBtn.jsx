@@ -17,7 +17,7 @@ export function ExpandBtn({
         }
       >
         <div
-          className={`duration-500 ${isClosed ? "max-h-0 overflow-hidden opacity-0" : "max-h-[512px] opacity-100"}`}
+          className={`duration-500 ${isClosed ? "expand-btn-closed" : "expand-btn-opened"}`}
         >
           {children}
         </div>
@@ -37,7 +37,7 @@ export function ExpandBtn({
       <div
         className={
           styles +
-          ` duration-500 ${isClosed ? "max-h-0 overflow-hidden opacity-0" : "max-h-[512px] opacity-100"}`
+          ` duration-500 ${isClosed ? "expand-btn-closed" : "expand-btn-opened"}`
         }
       >
         {children}
