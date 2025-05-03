@@ -11,7 +11,7 @@ const projects = [
     ],
     skills: ["bash"],
     image:
-      "https://raw.githubusercontent.com/BrunoJardon/SysUp/main/preview.webp",
+      "sysup.webp",
     link: "https://github.com/BrunoJardon/SysUp",
   },
 ];
@@ -26,7 +26,7 @@ const projects = [
           <article>
             <Image
               class="rounded-t-md w-full"
-              src={project.image}
+              src={`/src/assets/imgs/projects/${project.image}`}
               alt={`Vista previa de ${project.name}`}
               title={`Vista previa de ${project.name}`}
               width={300}
