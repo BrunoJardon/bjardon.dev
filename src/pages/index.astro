@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import "@fontsource-variable/geologica";
 
 import { description, name, prevImg, title } from "@/constants.js";
 import {
@@ -38,25 +38,27 @@ import "@/styles.css";
 
     <title>{name} | {title}</title>
   </head>
-  <body id="start">
+  <body id="start" class="bg-gradient-to-b from-gradient-a to-gradient-b">
     <header>
       <Navbar />
     </header>
 
-    <main>
-      <Hero />
+    <div class="w-9/12 mx-auto">
+      <main>
+        <Hero />
 
-      <Projects />
+        <Projects />
 
-      <Experiences />
+        <Experiences />
 
-      <Studies />
+        <Studies />
 
-      <Skills />
+        <Skills />
 
-      <AboutMe />
-    </main>
+        <AboutMe />
+      </main>
 
-    <Footer />
+      <Footer />
+    </div>
   </body>
 </html>

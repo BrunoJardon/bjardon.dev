@@ -1,21 +1,35 @@
 ---
 import { Image } from "astro:assets";
+
 import { title } from "@/constants.js";
 ---
 
-<section id="hero">
-  <Image
-    src="/src/assets/imgs/perfil.webp"
-    alt="Foto de perfil de Jardón Bruno"
-    width={350}
-    height={350}
-    loading="eager"
-  />
-  <a href="/src/assets/files/CV-Jardon-Bruno.pdf" class="cta-button">Ver CV</a>
-  <h1>Jardón Bruno Noel</h1>
-  <p class="job-title">{title}</p>
-  <p class="bio">
-    +1 año de experiencia en el desarrollo de software,
-    <strong>técnico en informática.</strong>
-  </p>
+<section
+  id="hero"
+  class="max-w-screen h-screen flex justify-center items-center flex-col sm:flex-row sm:justify-evenly"
+>
+  <div class="text-center order-2 sm:order-1">
+    <Image
+      class="rounded-full border-4 border-font-b hidden sm:block"
+      src="/src/assets/imgs/perfil.webp"
+      alt="Foto de perfil de Jardón Bruno"
+      width={350}
+      height={350}
+      loading="eager"
+    />
+    <a
+      href="/src/assets/files/CV-Jardon-Bruno.pdf"
+      class="btn border-2 border-font-b bg-background-a rounded-xl px-2 py-1 text-font-a inline-block mt-12"
+      >Ver CV</a
+    >
+  </div>
+  <div class="text-center order-1 sm:order-2">
+    <h1 class="text-4xl">Jardón Bruno Noel</h1>
+    <h3 class="text-xl font-extralight">{title}</h3>
+    <p class="bio">
+      +1 año de experiencia en el desarrollo de software, <strong
+        >técnico en informática.</strong
+      >
+    </p>
+  </div>
 </section>

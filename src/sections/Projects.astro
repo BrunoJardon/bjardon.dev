@@ -1,40 +1,78 @@
 ---
 import { Image } from "astro:assets";
+
+import { ExpandBtn } from "@/components/ExpandBtn";
+
+const projects = [
+  {
+    name: "SysUp",
+    description: [
+      "Script que automatiza el proceso de actualización de sistemas Linux, incluyendo actualización de repositorios, instalación de paquetes, resolución de dependencias y limpieza.",
+    ],
+    skills: ["bash"],
+    image:
+      "sysup.webp",
+    link: "https://github.com/BrunoJardon/SysUp",
+  },
+];
 ---
 
 <section id="projects">
   <h2>Proyectos</h2>
-  <ul class="project-list">
-    <li>
-      <article class="project-card">
-        <h3>SysUp</h3>
-        <Image
-          src="https://raw.githubusercontent.com/brunojardon/SysUp/main/preview.webp"
-          alt="Vista previa de SysUp"
-          width={300}
-          height={200}
-          loading="eager"
-        />
-        <p>
-          Script que automatiza el proceso de actualización de sistemas basados
-          en Debian, incluyendo actualización de repositorios, instalación de
-          paquetes, resolución de dependencias y limpieza.
-        </p>
-        <p>
-          Ofrece la opción de reiniciar el sistema si es necesario después de la
-          actualización.
-        </p>
-        <a href="https://github.com/JardonBruno/SysUp" class="project-link">
-          Código
-          <Image
-            src="/src/assets/imgs/socials/github.svg"
-            alt="Logo de Github"
-            width={20}
-            height={20}
-            loading="eager"
-          />
-        </a>
-      </article>
-    </li>
+  <ul class="flex flex-wrap justify-center items-start text-font-a">
+    {
+      projects.map((project) => (
+        <li class="bg-background-a rounded-md max-w-sm m-3">
+          <article>
+            <Image
+              class="rounded-t-md w-full"
+              src={`/src/assets/imgs/projects/${project.image}`}
+              alt={`Vista previa de ${project.name}`}
+              title={`Vista previa de ${project.name}`}
+              width={300}
+              height={200}
+              loading="lazy"
+            />
+            <h3 class="text-center mt-8">{project.name}</h3>
+            <ul class="skill-list">
+              {project.skills.map((skill) => (
+                <li class="skill-item">
+                  <Image
+                    class="skill-icon"
+                    src={`/src/assets/imgs/skills/${skill}.svg`}
+                    alt={skill}
+                    title={skill}
+                    width={50}
+                    height={50}
+                    loading="lazy"
+                  />
+                </li>
+              ))}
+            </ul>
+            <ExpandBtn styles="mx-6 sm:mx-10" margin="my-4" client:load>
+              {project.description.map((description) => (
+                <p class="paragraph">{description}</p>
+              ))}
+              <a
+                class="project-link-btn"
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Código
+                <Image
+                  class="inline-block"
+                  src="/src/assets/imgs/socials/github.svg"
+                  alt="Github"
+                  width={20}
+                  height={20}
+                  loading="lazy"
+                />
+              </a>
+            </ExpandBtn>
+          </article>
+        </li>
+      ))
+    }
   </ul>
 </section>
